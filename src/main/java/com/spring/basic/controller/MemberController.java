@@ -27,7 +27,7 @@ public class MemberController {
         String name = memberCreateRequestDto.getName();
         log.info("email: {}", email);
         log.info("name: {}", name);
-        memberService.methodA(name);
+//        memberService.methodA(name);
     }
 
 }
