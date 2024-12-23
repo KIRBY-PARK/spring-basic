@@ -1,10 +1,7 @@
 package com.spring.basic.controller;
 
 import com.spring.basic.service.TodoService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /* 컨트롤러에서 해야하는 일
  * 1. 일정 생성
@@ -38,5 +35,10 @@ public class TodoController {
         String result = todoService.readTodoService(data);
         return result;
     }
+
+    // ::: 일정 수정 API
+
+
+    // ::: 일정 삭제 API
 
 }

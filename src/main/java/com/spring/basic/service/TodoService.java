@@ -28,4 +28,10 @@ public class TodoService {
         String result = todoRepository.readTodo(data);
         return result;
     }
+
+    // ::: 일정 수정 서비스 메서드
+
+
+    // ::: 일정 삭제 서비스 메서드
+
 }
