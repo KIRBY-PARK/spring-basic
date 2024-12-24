@@ -5,7 +5,7 @@ public class Member {
     private String name; // 이름
     private String email; // 이메일
     private String age; // 나이
-
+    
 
     // 생성자
 

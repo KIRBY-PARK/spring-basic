@@ -1,6 +1,7 @@
 package com.spring.basic.controller;
 
 import com.spring.basic.domain.Member;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,7 @@ import java.util.List;
 
 @Controller // MVC 패턴부터는 컨트롤러를 사용함
 @RequestMapping("/membermvc")
-
+@Slf4j
 public class MvcController {
     // 임시 회원 저장소
     private final List<Member> memberList = new ArrayList<>();
@@ -28,9 +29,10 @@ public class MvcController {
         // 비즈니스 로직 처리
 
         // 데이터베이스 저장,, 조회...
-
-        model.addAttribute("/membermvc", memberList);
+        log.info("목록 확인");
+        model.addAttribute("membermvc", memberList);
         return "member/member-list";
+
     }
 
     /*
@@ -48,6 +50,8 @@ public class MvcController {
     @PostMapping
     public String createMemberAPI(@ModelAttribute Member member) {
         memberList.add(member);
+        log.info("멤버 emaill : {}", member.getName());
         return "redirect:/membermvc";
     }
 }
+
